@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import React from 'react'
+import React ,{useMemo} from 'react'
 import { useTheme } from "@/lib/ThemeContext";
 import CubeComponent  from "@/components/shared/Cube"
 const HeroSection = () => {
   const { theme } = useTheme();
-  const F4D_IMAGE = theme == 'dark' ? "/images/logos/f4d-black.gif" :  "/images/logos/f4d-white.gif"
-  const NEXT_LOGO =   theme == 'dark' ?  "/images/Next-JS-logo-white.png" : "/images/Next-JS-logo-black.png"
-  const STRIPE_LOGO =   theme == 'dark' ? "/images/Strapi-logo-white.png" : "/images/Strapi-logo-black.png"
+  const F4D_IMAGE = useMemo(() => theme === 'dark' ? "/images/logos/f4d-black.gif" : "/images/logos/f4d-white.gif", [theme]);
+  const NEXT_LOGO = useMemo(() => theme === 'dark' ? "/images/Next-JS-logo-white.png" : "/images/Next-JS-logo-black.png", [theme]);
+  const STRIPE_LOGO = useMemo(() => theme === 'dark' ? "/images/Strapi-logo-white.png" : "/images/Strapi-logo-black.png", [theme]);
   return (
     <div className='w-full py-10'>
           <div className='hidden md:block'>

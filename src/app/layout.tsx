@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider>
-          <div className="dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-gray-100 dark:bg-gray-900 dark:text-white text-black w-screen h-screen">
+          <div className="dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-white dark:bg-gray-900 dark:text-white text-black w-screen h-screen">
             <Navbar />
             <ClientLayout>{children}</ClientLayout>
           </div>

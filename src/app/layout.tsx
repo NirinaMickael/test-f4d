@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientLayout from '../app/ClientLayout';
-import {ThemeProvider} from "@/context/ThemeContext";
+import { ThemeProvider } from "@/lib/ThemeContext";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
-
 
 export const metadata: Metadata = {
   title: "F4D",
@@ -21,9 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <ThemeProvider>
-        <ClientLayout>{children}</ClientLayout>
-      </ThemeProvider>
+        <ThemeProvider>
+          <div className="dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-gray-100 dark:bg-gray-900 dark:text-white text-black w-screen h-screen">
+            <Navbar />
+            <ClientLayout>{children}</ClientLayout>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

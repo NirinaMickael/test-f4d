@@ -9,7 +9,7 @@ import IconCloseWhite from "./icons/IconCloseWhite";
 const Navbar: FC = () => {
   const [activeLink, setActiveLink] = useState<string>("Services");
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const { isDarkTheme } = useTheme();
+  const { theme } = useTheme();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -23,7 +23,7 @@ const Navbar: FC = () => {
       >
         <div
           className={`text-[24px] font-bold ${
-            isDarkTheme ? "text-white" : "text-black"
+            theme == "dark" ? "text-white" : "text-black"
           }`}
         >
           FRENCH4 <span className="text-blue-500">DEV.</span>
@@ -50,11 +50,9 @@ const Navbar: FC = () => {
           >
             <Link
               href="#"
-              className={`block py-2 md:py-0 ${
+              className={`block py-2 md:py-0 dark:text-white text-black ${
                 activeLink === link ? "font-bold opacity-100" : "opacity-50"
-              } transition-opacity duration-300 ${
-                isDarkTheme ? "text-white" : "text-black"
-              }`}
+              } transition-opacity duration-300 `}
             >
               {link}
             </Link>

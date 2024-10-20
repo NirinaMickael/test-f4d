@@ -1,48 +1,33 @@
 "use client";
 import React, { useContext } from "react";
-import { Context } from "@/lib/ThemeContext";
+import { useTheme } from "@/lib/ThemeContext";
 import IconMoon from "./icons/IconMoon";
 import IconSun from "./icons/IconSun";
 
 const ThemeSwitcher: React.FC = () => {
-  const themeContext = useContext(Context);
-
-  if (!themeContext) {
-    throw new Error("ThemeSwitcher must be used within a ThemeProvider");
-  }
-
-  const { isDarkTheme, setIsDarkTheme } = themeContext;
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button
-      onClick={() => setIsDarkTheme(!isDarkTheme)}
-      className={`relative flex items-center p-1 rounded-full transition-colors duration-300 ${
-        isDarkTheme ? "bg-gray-700" : "bg-blue-600"
-      } w-20 h-10`}
+    onClick={() => toggleTheme()}
+      className="relative flex items-center px-2 rounded-full transition-colors duration-300 dark:bg-gray-700
+      bg-blue-600 w-24 h-10
+      "
     >
-      {isDarkTheme ? (
         <span
-          className={`absolute right-2 text-white text-sm font-bold transition-all duration-300`}
+          className={`absolute dark:-right-7 left-2 text-white text-sm font-bold transition-all duration-300`}
         >
-          Dark
+          {theme == 'dark' ? "Dark" : "Light"}
         </span>
-      ) : (
-        <span
-          className={`absolute left-2 text-white text-sm font-bold transition-all duration-300`}
-        >
-          Light
-        </span>
-      )}
 
       <div
-        className={`flex items-center justify-center w-8 h-8 rounded-full transition-transform transform ${
-          isDarkTheme ? "translate-x-0 bg-blue-600" : "translate-x-10 bg-white"
-        }`}
+        className="flex items-center justify-center w-8 h-8 rounded-full transition-transform transform  dark:translate-x-0 dark:bg-blue-600
+          translate-x-12 bg-white"
       >
-        {isDarkTheme ? (
-          <IconMoon className="text-white" />
+        {theme == 'dark' ? (
+          <IconMoon />
         ) : (
-          <IconSun className="text-yellow-500" />
+          <IconSun  />
         )}
       </div>
     </button>

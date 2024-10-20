@@ -65,7 +65,7 @@ const Navbar: FC = () => {
             )}
           </li>
         ))}
-        <div className="md:flex items-center">
+        <div className="md:hidden flex items-center">
         <ThemeSwitcher />
       </div>
       </ul>

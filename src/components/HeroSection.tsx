@@ -12,8 +12,8 @@ const HeroSection = () => {
           <div className='hidden md:block'>
           <CubeComponent></CubeComponent>
           </div>
-          <div className=' relative w-full xl:w-11/12  mx-auto flex justify-center flex-col items-center gap-y-10 z-40' >
-               <div className='relative z-10'>
+          <div className=' relative w-full xl:w-11/12  mx-auto flex justify-center flex-col items-center gap-y-10 z-[5]' >
+               <div className='relative'>
                <Image src={F4D_IMAGE} width={350} height={350} alt='f4d'/>
                </div>
                <div  className='text-2xl md:text-4xl xl:text-6xl text-center'>

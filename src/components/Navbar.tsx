@@ -15,7 +15,7 @@ const Navbar: FC = () => {
 
   return (
     <nav
-      className={`h-[80px] md:py-[31px] px-[10%] md:px-[81px] flex justify-between items-center relative z-[10] border-b-0   `}
+      className={`h-[80px]  md:py-[31px] px-[10%] md:px-[81px] flex justify-between items-center relative z-[10] border-b-0   `}
     >
       <div
         id="logoFrench4Dev"
@@ -29,13 +29,13 @@ const Navbar: FC = () => {
           FRENCH4 <span className="text-blue-500">DEV.</span>
         </div>
 
-        <button className="md:hidden text-white" onClick={toggleMenu}>
-          {isMenuOpen ? <IconCloseWhite /> : <IconOpenWhite />}
+        <button className="md:hidden dark:text-white text-black" onClick={toggleMenu}>
+          {isMenuOpen ? <IconCloseWhite  fill={theme=='dark' ? "#FFF" : "#000"}/> : <IconOpenWhite fill={theme=='dark' ? "#FFF" : "#000"} />}
         </button>
       </div>
 
       <ul
-        className={`fixed top-0 left-0 h-full w-[250px] bg-black z-[1] flex flex-col items-center gap-4 pt-20 transition-transform transform ${
+        className={`fixed top-0 z-50 left-0 h-full w-[250px] dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-gray-50 dark:bg-gray-900 dark:text-white text-black  flex flex-col items-center gap-4 pt-20 transition-transform transform ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } md:relative md:translate-x-0 md:flex-row md:w-auto md:pt-0 md:bg-transparent md:flex md:items-center md:gap-[40px]`}
       >
@@ -65,6 +65,9 @@ const Navbar: FC = () => {
             )}
           </li>
         ))}
+        <div className="md:flex items-center">
+        <ThemeSwitcher />
+      </div>
       </ul>
 
       <div className="hidden md:flex items-center">

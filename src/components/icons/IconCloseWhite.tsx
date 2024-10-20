@@ -1,11 +1,12 @@
-const IconCloseWhite: React.FC<{ width?: string; height?: string }> = ({
+const IconCloseWhite: React.FC<{ width?: string; height?: string ,fill:string }> = ({
   width = "26px",
   height = "26px",
+  fill
 }) => {
   return (
     <div>
       <svg
-        fill="#FFFFFF"
+        fill={fill}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 50 50"
         width={width}

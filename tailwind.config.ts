@@ -1,6 +1,6 @@
 import headlessuiPlugin from '@headlessui/tailwindcss';
 import { type Config } from 'tailwindcss';
-
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 export default {
   darkMode: 'class',
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -59,5 +59,16 @@ export default {
       },
     },
   },
-  plugins: [headlessuiPlugin],
+  plugins: [headlessuiPlugin,addVariablesForColors],
 } satisfies Config;
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}

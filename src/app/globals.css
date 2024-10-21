@@ -82,3 +82,23 @@ body {
 .custom-blur {
   filter: blur(8px);
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px;
+}
+
+.svg-border {
+  position: absolute;
+}
+
+.neon {
+  filter: url(#neon);
+}
+.bg-blur {
+  background: url('/images/cube-in-left-medium.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}

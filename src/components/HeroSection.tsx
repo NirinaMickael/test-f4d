@@ -29,12 +29,22 @@ const HeroSection = () => {
       <div className=' relative w-full xl:w-11/12  mx-auto flex justify-center flex-col items-center gap-y-10 z-[5]' >
       <motion.div
         className="absolute bg-blur w-[100px] md:w-[600px] h-[200px] md:h-[700px] -top-[100px] z-[6] left-0"
-        animate={{ x: [0,100,0] }}
+        animate={{ x: [0,60,0] }}
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
       />
       <motion.div
         className="absolute bg-blur w-[600px] h-[700px] -top-[200px] z-[6] -left-[200px]"
-        animate={{ x: [0,100,0] }}
+        animate={{ x: [0,60,0] }}
+        transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
+      />
+            <motion.div
+        className="absolute bg-blur w-[100px] md:w-[600px] h-[200px] md:h-[700px] -top-[100px] z-[6] right-0"
+        animate={{ x: [0,60,0] }}
+        transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
+      />
+      <motion.div
+        className="absolute bg-blur w-[600px] h-[700px] top-[100px] z-[6] -right-[150px]"
+        animate={{ x: [0,60,0] }}
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
       />
         <div className='relative'>

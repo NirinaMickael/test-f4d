@@ -22,24 +22,24 @@ const HeroSection = () => {
     return null;
   }
   return (
-    <div className='w-full py-3'>
+    <div className='md:w-9/12 lg:w-8/12 mx-auto py-3'>
       <div className='block'>
         <CubeComponent></CubeComponent>
       </div>
       <div className=' relative w-full xl:w-11/12  mx-auto flex justify-center flex-col items-center gap-y-10 z-[5]' >
         <div className='hidden md:block'>
-        <motion.div
-        className="absolute bg-blur w-[100px] md:w-[600px] h-[200px] md:h-[700px] -top-[100px] z-[6] left-0"
+        {/* <motion.div
+        className="absolute bg-blur w-[100px] md:w-[600px] h-[200px] md:h-[700px] top-[100px] z-[6] -left-5"
         animate={{ x: [0,60,0] }}
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
-      />
+      /> */}
       <motion.div
         className="absolute bg-blur w-[600px] h-[700px] -top-[200px] z-[6] -left-[200px]"
         animate={{ x: [0,60,0] }}
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
       />
       <motion.div
-        className="absolute bg-blur w-[100px] md:w-[600px] h-[200px] md:h-[700px] -top-[100px] z-[6] right-0"
+        className="absolute bg-blur w-[100px] md:w-[600px] h-[700px] md:h-[700px] -top-[80px] z-[6] -right-80"
         animate={{ x: [0,60,0] }}
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
       />
@@ -69,7 +69,7 @@ const HeroSection = () => {
                </div>
       </Button>
         <div className='text-center w-full xl:w-9/12 px-3'>
-          <p className='text-sm md:text-base'>Nous créons des applications web sur mesure, rapides et évolutives grâce à Strapi pour une gestion de contenu flexible et Next.js pour des performances optimales et un SEO renforcé.</p>
+          <p className='text-center font-medium text-white'>Nous créons des applications web sur mesure, rapides et évolutives grâce à Strapi pour une gestion de contenu flexible et Next.js pour des performances optimales et un SEO renforcé.</p>
         </div>
         <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 pl-6 pr-2  text-sm md:text-base rounded-full flex items-center ">
           Demander une développement

@@ -48,7 +48,7 @@ const HeroSection = () => {
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
       />
         <div className='relative'>
-          <Image src={F4D_IMAGE} width={450} height={450} alt='f4d' />
+          <Image src={F4D_IMAGE} width={450} height={450} alt='f4d' className='!w-[200px] md:!w-[450px]  ' />
         </div>
         <div className='text-2xl md:text-4xl xl:text-6xl text-center'>
           <span className='font-semibold' >Solutions</span> de développement <br></br>

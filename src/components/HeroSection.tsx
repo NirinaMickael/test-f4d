@@ -63,9 +63,9 @@ const HeroSection = () => {
         className="w-[250px]  lg:w-[500px] dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-white text-black dark:text-white border-neutral-200 dark:border-slate-800"
       >
                 <div className='border w-[250px]  lg:w-[500px]  flex justify-center dark:border-slate-800 rounded gap-x-2 items-center px-10 py-5'>
-               <Image src={STRIPE_LOGO} width={120} height={150} alt='f4d' />
+               <Image src={STRIPE_LOGO} width={120} height={150} alt='f4d' className='!w-[100px] md:w-[120px]  ' />
                <span className='text-base'>&</span>
-               <Image src={NEXT_LOGO} width={100} height={30} alt='f4d' />
+               <Image src={NEXT_LOGO} width={100} height={30} alt='f4d' className='!w-[80px] md:w-[100px]  ' />
                </div>
       </Button>
         <div className='text-center w-full xl:w-9/12 px-3'>

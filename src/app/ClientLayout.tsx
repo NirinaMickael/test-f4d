@@ -12,7 +12,7 @@ export default function ClientLayout({
 
   return (
     <>
-      <main className={`font-gilroy`}>
+      <main className={`font-gilroy overflow-hidden`}>
         {children}
       </main>
     </>

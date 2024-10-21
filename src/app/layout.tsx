@@ -20,14 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider>
-          <div className="dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-white dark:bg-gray-900 dark:text-white text-black w-screen">
+       <ThemeProvider>
+      <body className={inter.className + " dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-white dark:bg-gray-900 dark:text-white text-black w-screen h-screen"}>
+       
+          <div>
             <Navbar />
             <ClientLayout>{children}</ClientLayout>
           </div>
-        </ThemeProvider>
+
       </body>
+      </ThemeProvider>
     </html>
   );
 }

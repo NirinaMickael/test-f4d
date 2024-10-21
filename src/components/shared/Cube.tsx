@@ -61,7 +61,7 @@ const Cube: React.FC<CubeProps> = ({ position, rotation, scale = [1, 1, 1], anim
 const CubeComponent: React.FC = () => {
     return (
         <>
-            <div className='absolute right-0 z-[2] bg-blur '  >
+            <div className='absolute md:right-0 z-[2] bg-blur md:top-0 -top-4 -right-2 '  >
                 <Canvas style={{ width: '100%', height: '400px' }}>
                     <ambientLight intensity={0.5} />
                     <pointLight position={[2, 2, 2]} intensity={1.5} />
@@ -75,7 +75,7 @@ const CubeComponent: React.FC = () => {
                     />
                 </Canvas>
             </div>
-            <div className='absolute left-0 w-[500px] z-[2] '>
+            <div className='absolute  hidden md:block left-0 w-[500px] z-[2] '>
                 <Canvas style={{ width: '100%', height: '400px' }}>
                     <ambientLight intensity={0.5} />
                     <Cube position={[-1, 0, 0]} 

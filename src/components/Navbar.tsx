@@ -77,9 +77,9 @@ const Navbar: FC = () => {
             )}
           </li>
         ))}
-        <div className="md:hidden flex items-center">
+        <li className="md:hidden flex absolute top-[70%]">
           <ThemeSwitcher />
-        </div>
+        </li>
       </ul>
 
       <div className="hidden md:flex items-center">

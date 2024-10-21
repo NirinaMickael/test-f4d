@@ -16,11 +16,11 @@
   }
 }
 
-body {
+/* body {
   color: #47715B;
   font-family: 'Gilroy', sans-serif;
   background-color: #E1E1E1;
-}
+} */
 
 @layer utilities {
   .text-balance {

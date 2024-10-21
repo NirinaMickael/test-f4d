@@ -34,12 +34,22 @@ const HeroSection = () => {
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
       /> */}
       <motion.div
-        className="absolute bg-blur w-[600px] h-[700px] -top-[200px] z-[6] -left-[200px]"
-        animate={{ x: [0,60,0] }}
+        className="absolute bg-blur w-[600px] h-[700px] -top-[100px] z-[6] -left-[200px]"
+        animate={{ x: [0,40,0] }}
+        transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
+      />
+        <motion.div
+        className="absolute bg-blur w-[600px] h-[700px]  -top-[70px] z-[6] -left-[400px]"
+        animate={{ x: [0,40,0] }}
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
       />
       <motion.div
         className="absolute bg-blur w-[100px] md:w-[600px] h-[700px] md:h-[700px] -top-[80px] z-[6] -right-80"
+        animate={{ x: [0,60,0] }}
+        transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
+      />
+            <motion.div
+        className="absolute bg-blur w-[100px] md:w-[600px] h-[700px] md:h-[700px] top-[80px] z-[6] -right-80"
         animate={{ x: [0,60,0] }}
         transition={{ duration: 4, repeat: Infinity, repeatType: 'reverse', ease: "linear"  }}
       />

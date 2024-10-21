@@ -79,7 +79,7 @@ const HeroSection = () => {
                </div>
       </Button>
         <div className='text-center w-full xl:w-9/12 px-3'>
-          <p className='text-center font-medium text-white dark:text-white'>Nous créons des applications web sur mesure, rapides et évolutives grâce à Strapi pour une gestion de contenu flexible et Next.js pour des performances optimales et un SEO renforcé.</p>
+          <p className='text-center font-medium text-black dark:text-white'>Nous créons des applications web sur mesure, rapides et évolutives grâce à Strapi pour une gestion de contenu flexible et Next.js pour des performances optimales et un SEO renforcé.</p>
         </div>
         <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 pl-6 pr-2  text-sm md:text-base rounded-full flex items-center ">
           Demander une développement

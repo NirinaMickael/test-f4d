@@ -57,12 +57,12 @@ const HeroSection = () => {
           <span className='font-semibold'>rapides</span>  et <span className='font-semibold'>flexibles</span> avec  <br></br>
         </div>
                <Button
-               containerClassName="w-[225px]  lg:w-[500px]"
+               containerClassName="w-[250px]  lg:w-[500px]"
                duration={3000}
         borderRadius="0.4rem"
-        className="w-[225px]  lg:w-[500px] dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-white text-black dark:text-white border-neutral-200 dark:border-slate-800"
+        className="w-[250px]  lg:w-[500px] dark:bg-gradient-to-b from-[#070b14] to-[#07071b] bg-white text-black dark:text-white border-neutral-200 dark:border-slate-800"
       >
-                <div className='border w-[225px]  lg:w-[500px]  flex justify-center dark:border-slate-800 rounded gap-x-2 items-center px-10 py-5'>
+                <div className='border w-[250px]  lg:w-[500px]  flex justify-center dark:border-slate-800 rounded gap-x-2 items-center px-10 py-5'>
                <Image src={STRIPE_LOGO} width={120} height={150} alt='f4d' />
                <span className='text-base'>&</span>
                <Image src={NEXT_LOGO} width={100} height={30} alt='f4d' />
